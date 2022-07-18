@@ -26,7 +26,7 @@ class SandpackInstance {
     this.integrations = new Integrations(this.messageBus);
 
     this.bundler = new Bundler({ messageBus: this.messageBus });
-
+    // 这个地方注册的
     const disposeOnMessage = this.messageBus.onMessage((msg) => {
       this.handleParentMessage(msg);
     });

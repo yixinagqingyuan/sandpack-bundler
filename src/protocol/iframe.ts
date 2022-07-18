@@ -19,7 +19,6 @@ export class IFrameParentMessageBus {
 
   private _messageListener(evt: any) {
     const data = evt.data;
-
     if (data.type === 'register-frame') {
       this.parentId = data.id;
       return;

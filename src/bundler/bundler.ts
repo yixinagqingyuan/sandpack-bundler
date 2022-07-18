@@ -77,6 +77,7 @@ export class Bundler {
   }
 
   async initPreset(preset: string): Promise<void> {
+    debugger
     if (!this.preset) {
       this.preset = getPreset(preset);
       await this.preset.init(this);
@@ -356,7 +357,7 @@ export class Bundler {
     }
 
     this.onStatusChangeEmitter.fire('transpiling');
-
+    debugger
     // Transform runtimes
     if (this.isFirstLoad) {
       for (const runtime of this.runtimes) {
@@ -378,6 +379,7 @@ export class Bundler {
     entryModule.isEntry = true;
 
     const transpiledModules = Array.from(this.modules, ([name, value]) => {
+      
       return {
         /**
          * TODO: adds trailing for backwards compatibility

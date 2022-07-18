@@ -43,6 +43,7 @@ export class Emitter<T> implements IDisposable {
   }
 
   /** Invoke all listeners registered to this event. */
+  //调用所有注册到此事件的侦听器
   fire(event: T): void {
     this.registeredListeners.forEach((listener) => {
       listener(event);

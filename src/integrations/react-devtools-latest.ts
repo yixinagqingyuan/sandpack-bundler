@@ -9,6 +9,7 @@ function initIntegration({ messageBus }: { messageBus: IFrameParentMessageBus })
     const wall = {
       listen(listener: any) {
         window.addEventListener('message', (event) => {
+
           if (event.data.uid === uid) {
             listener(event.data);
           }

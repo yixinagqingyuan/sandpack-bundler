@@ -15,6 +15,7 @@ export class ReactPreset extends Preset {
   }
 
   async init(bundler: Bundler): Promise<void> {
+    debugger
     await super.init(bundler);
 
     await Promise.all([
